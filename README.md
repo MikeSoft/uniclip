@@ -91,6 +91,16 @@ On macOS or GNU/Linux, delete `/usr/local/bin/uniclip`
 On Windows, delete it from where you installed it  
 On Termux, delete it from `$PREFIX/usr/bin/uniclip`
 
+
+## How run with Docker
+```bash
+cd docker
+# Build the Docker image
+make build
+# Run the Docker container
+make run
+```
+  
 ## Any other business
 Have a question, idea or just want to share something? Head over to [Discussions](https://github.com/quackduck/uniclip/discussions)
 

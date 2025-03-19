@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  uniclip:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: uniclip
+    environment:
+      - DISPLAY=${DISPLAY}  # X11 forwarding if Linux
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix  # X11 forwarding if Linux
+    ports:
+      - "${PORT:-53701}:${PORT:-53701}"
+    command: -p ${PORT:-53701} ${DEBUG:+--debug}
